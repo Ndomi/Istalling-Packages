@@ -2,6 +2,14 @@
 # defaults file for package
 package_state: latest
 
+package_name:
+  - httpd
+  - firewalld
+  - vsftpd
+
 non_restart_package: 
   - bash-completion
   - wget
+
+remove_package:
+  - elinks

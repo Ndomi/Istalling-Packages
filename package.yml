@@ -1,5 +1,6 @@
 ---
 
-- hosts: test
-  include_role:
-    - package
+  - hosts: test
+    tasks:
+      - include_role:
+          name: package

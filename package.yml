@@ -1,0 +1,5 @@
+---
+
+- hosts: test
+  include_role:
+    - package

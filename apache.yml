@@ -1,0 +1,32 @@
+---
+  - hosts: test
+    tasks:
+
+## install Restartable packages
+
+      - include_role:
+          name: package
+        vars:
+          package_name: 
+            - httpd
+            - firewalld
+            - vsftpd
+          package_state: latest
+
+## Install non restartable packages
+
+      - include_role:
+          name: package
+        vars:
+          non_restart_package: 
+            - wget
+            - bash-completion
+          package_state: latest
+
+## Remove packages(both non restartable and restartable)
+
+      - include_role:
+          name: package
+        vars:
+          remove_package:
+            - elinks

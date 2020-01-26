@@ -1,0 +1,24 @@
+---
+
+  - hosts: test
+    tasks:
+
+## Start Service
+
+      - include_role:
+          name: service 
+        vars:
+          start_service_name: firewalld
+
+## Stop Service
+
+      - include_role:
+          name: service
+        vars:
+          stop_service_name: httpd
+
+
+      - include_role:
+          name: service
+        vars:
+          stop_service_name: vsftpd

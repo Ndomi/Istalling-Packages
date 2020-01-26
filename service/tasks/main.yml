@@ -1,0 +1,13 @@
+---
+# tasks file for service
+  - name: Start service
+    service:
+      name: "{{ start_service_name }}"
+      state: "{{ start_service }}"
+    when: start_service_name is defined
+
+  - name: Stop service
+    service:
+      name: "{{ stop_service_name }}"
+      state: "{{ stop_service }}"
+    when: stop_service_name is defined

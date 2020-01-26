@@ -1,0 +1,9 @@
+---
+# defaults file for service
+start_service: started
+
+stop_service: stopped
+
+#start_service_name: httpd
+
+#stop_service_name: firewalld

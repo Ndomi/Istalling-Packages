@@ -1,0 +1,7 @@
+---
+# defaults file for package
+package_state: latest
+
+non_restart_package: 
+  - bash-completion
+  - wget

@@ -1,0 +1,21 @@
+---
+# tasks file for package
+
+  - name: Install package
+    package:
+      name: "{{ package_name }}"
+      state: "{{ package_state }}"
+    notify: start "{{ package_name }}"
+    when: package_name is defined
+
+  - name: Install Non restart package
+    package:
+      name: "{{ non_restart_package }}"
+      state: "{{ package_state }}"
+    when: non_restart_package is defined
+
+  - name: Remove Package
+    package:
+      name: "{{ remove_package }}"
+      state: absent
+    when: remove_package is defined

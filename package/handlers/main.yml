@@ -1,0 +1,6 @@
+---
+# handlers file for package
+- name: start "{{ package_name }}"
+  service:
+    name: "{{ package_name }}"
+    state: started
